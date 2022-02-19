@@ -26,6 +26,11 @@ if($cek > 0){
 		$_SESSION['level'] = "pegawai";
 		header("location:halaman_pegawai.php");
  
+	}else if($data['level']=="dokter"){
+		$_SESSION['username'] = $username;
+		$_SESSION['level'] = "dokter";
+		header("location:halaman_dokter.php");
+ 
 	}else{
  
 		header("location:index.php?pesan=gagal");

@@ -28,9 +28,9 @@
  
 	<div class="menu">
 		<ul>
-			<li><a href="halaman_pegawai.php?page=home">HOME</a></li>
-			<li><a href="halaman_pegawai.php?page=pegawai">PEGAWAI</a></li>
-			<li><a href="halaman_pegawai.php?page=obat">OBAT</a></li>
+			<li><a href="halaman_dokter.php?page=home">HOME</a></li>
+			<li><a href="halaman_dokter.php?page=rujukan">RUJUKAN PASIEN</a></li>
+			<li><a href="halaman_dokter.php?page=dokter">DATA DOKTER</a></li>
 			<li><a href="logout.php">LOGOUT</a></li>
 		</ul>
 	</div>
@@ -44,26 +44,26 @@
  
 		switch ($page) {
 			case 'home':
-				include "HalamanPegawai/home.php";
+				include "HalamanDokter/home.php";
 				break;
-			case 'pegawai':
-				include "HalamanPegawai/pegawai.php";
+			case 'rujukan':
+				include "HalamanDokter/rujukan.php";
 				break;
-			case 'editpegawai':
-				include "HalamanPegawai/editpegawai.php";
+			case 'dokter':
+				include "HalamanDokter/dokter.php";
 				break;
-			case 'editobat':
-				include "HalamanPegawai/editobat.php";
+			case 'tambahrujukan':
+				include "HalamanDokter/tambahRujukan.php";
 				break;
-			case 'tambahpegawai':
-				include "HalamanPegawai/tambahpegawai.php";
-				break;
-			case 'tambahobat':
-				include "HalamanPegawai/tambahobat.php";
+			case 'tambahdokter':
+				include "HalamanDokter/tambahdokter.php";
 				break;	
-			case 'obat':
-				include "HalamanPegawai/obat.php";
+			case 'editrujukan':
+				include "HalamanDokter/editRujukan.php";
 				break;
+			case 'editdokter':
+				include "HalamanDokter/editdokter.php";
+				break;	
 			case 'hapus':
 				include "HalamanUser/hapus.php";
 				break;				
@@ -72,7 +72,7 @@
 				break;
 		}
 	}else{
-		include "HalamanUser/home.php";
+		include "HalamanDokter/home.php";
 	}
  
 	 ?>

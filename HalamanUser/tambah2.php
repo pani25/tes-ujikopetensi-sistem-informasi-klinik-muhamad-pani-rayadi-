@@ -7,7 +7,7 @@
         <br/>
 	<br/>
 
-    <form method="post" action="tambah_aksi2.php">
+    <form method="post" action="tambah_aksi_registrasi.php">
 		<table width=60%>
 			<tr>			
 				<td>Nama</td>

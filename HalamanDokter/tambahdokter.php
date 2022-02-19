@@ -1,5 +1,5 @@
 <div class="halaman">
-	<h2> TAMBAH USER </h2>
+	<h2> TAMBAH DOKTER </h2>
 </div>
 
     <br/>
@@ -7,7 +7,7 @@
         <br/>
 	<br/>
 
-    <form method="post" action="tambah_aksi_user.php">
+    <form method="post" action="tambah_aksi_dokter.php">
 		<table width=60%>
 			<tr>			
 				<td>Nama</td>

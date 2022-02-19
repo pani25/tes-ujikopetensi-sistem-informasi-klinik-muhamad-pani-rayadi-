@@ -1,20 +1,20 @@
 <div class="halaman">
-	<h2> EDIT DATA USER </h2>
+	<h2> EDIT DATA RUJUKAN </h2>
 </div>
 
     <br/>
-        <a href="halaman_user.php?page=user" class="tombol">KEMBALI</a>
+        <a href="halaman_dokter.php?page=rujukan" class="tombol">KEMBALI</a>
         <br/>
 	<br/>
 
     <?php
 	include 'koneksi.php';
 	$id = $_GET['id'];
-	$data = mysqli_query($koneksi,"select * from user where id='$id'");
+	$data = mysqli_query($koneksi,"select * from tindakan where id='$id'");
 	while($d = mysqli_fetch_array($data)){
 		?>
 
-<form method="post" action="HalamanUser/updateuser.php">
+<form method="post" action="HalamanDokter/updaterujukan.php">
 			<table>
 				<tr>			
 					<td>Nama</td>
@@ -25,15 +25,15 @@
 				</tr>
 				<tr>
 					<td>Username</td>
-					<td><input type="text" name="username" value="<?php echo $d['username']; ?>"></td>
+					<td><input type="text" name="keluhan" value="<?php echo $d['keluhan']; ?>"></td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="text" name="password" value="<?php echo $d['password']; ?>"></td>
+					<td><input type="text" name="tindakan" value="<?php echo $d['tindakan']; ?>"></td>
 				</tr>
                 <tr>
 					<td>Level</td>
-					<td><input type="text" name="level" value="<?php echo $d['level']; ?>"></td>
+					<td><input type="text" name="resepObat" value="<?php echo $d['resepObat']; ?>"></td>
 				</tr>
 				<tr>
 					<td></td>

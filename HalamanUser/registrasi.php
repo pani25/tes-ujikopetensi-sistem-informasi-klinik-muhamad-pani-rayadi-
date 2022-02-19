@@ -37,7 +37,7 @@
 					<td><?php echo $d['poli']; ?></td>
                     <td><?php echo $d['keluhan']; ?></td>
                     <td>
-                        <a href="hapus2.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+                        <a href="hapusregistrasi.php?id=<?php echo $d['id']; ?>">HAPUS</a>
                     </td>
         </tr>
         <?php } ?>

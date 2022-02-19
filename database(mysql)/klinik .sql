@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Feb 2022 pada 11.18
+-- Waktu pembuatan: 19 Feb 2022 pada 05.36
 -- Versi server: 10.3.16-MariaDB
 -- Versi PHP: 7.3.6
 
@@ -31,16 +31,15 @@ SET time_zone = "+00:00";
 CREATE TABLE `obat` (
   `id` int(11) NOT NULL,
   `namaObat` varchar(255) NOT NULL,
-  `jenisObat` varchar(255) NOT NULL
+  `hargaObat` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `obat`
 --
 
-INSERT INTO `obat` (`id`, `namaObat`, `jenisObat`) VALUES
-(1, 'ibuprofen', 'demam & sakit kepala'),
-(2, 'paracetamol', 'demam & sakit kepala (disertai kelainan lambung)');
+INSERT INTO `obat` (`id`, `namaObat`, `hargaObat`) VALUES
+(5, 'panadol', 5000);
 
 -- --------------------------------------------------------
 
@@ -71,6 +70,27 @@ INSERT INTO `pasien` (`id`, `nama`, `tanggalLahir`, `tempatlahir`, `umur`, `jeni
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tindakan`
+--
+
+CREATE TABLE `tindakan` (
+  `id` int(255) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `keluhan` varchar(255) NOT NULL,
+  `tindakan` varchar(255) NOT NULL,
+  `resepObat` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tindakan`
+--
+
+INSERT INTO `tindakan` (`id`, `nama`, `keluhan`, `tindakan`, `resepObat`) VALUES
+(1, 'norman', 'sakit kepala dan demam tinggi', 'pemberian obat penerun demam', 'panadol');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `user`
 --
 
@@ -90,7 +110,8 @@ INSERT INTO `user` (`id`, `nama`, `username`, `password`, `level`) VALUES
 (17, 'rizky nova', 'nova', 'nova12345', 'user'),
 (21, 'muhamad pani rayadi', 'pani', 'pani12345', 'user'),
 (22, 'riki ahmad', 'riki', 'riki12345', 'user'),
-(23, 'ahmad nur fauzan', 'ahmad', 'ahmad12345', 'pegawai');
+(25, 'ahmad', 'ahmad', 'ahmad12345', 'pegawai'),
+(26, 'rohmat', 'rohmat', 'rohmat12345', 'dokter');
 
 --
 -- Indexes for dumped tables
@@ -109,6 +130,12 @@ ALTER TABLE `pasien`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `tindakan`
+--
+ALTER TABLE `tindakan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
@@ -122,19 +149,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `obat`
 --
 ALTER TABLE `obat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `pasien`
 --
 ALTER TABLE `pasien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT untuk tabel `tindakan`
+--
+ALTER TABLE `tindakan`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

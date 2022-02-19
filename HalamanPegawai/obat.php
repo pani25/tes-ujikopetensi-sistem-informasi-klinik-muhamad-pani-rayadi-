@@ -9,7 +9,7 @@
         <tr>
             <<th>NO</th>
 			<th>Nama Obat</th>
-			<th>Jenis Obat</th>
+			<th>Harga Obat</th>
 			<th>OPSI</th>
 		</tr>
 
@@ -22,10 +22,10 @@
         <tr>
                     <td><?php echo $no++; ?></td>
                     <td><?php echo $d['namaObat']; ?></td>
-                    <td><?php echo $d['jenisObat']; ?></td>
+                    <td><?php echo $d['hargaObat']; ?></td>
                     <td>
-                        <a href="halaman_pegawai.php?page=edit">EDIT</a>
-                        <a href="hapus4.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+                        <a href="halaman_pegawai.php?page=editobat">EDIT</a>
+                        <a href="hapusobat.php?id=<?php echo $d['id']; ?>">HAPUS</a>
                     </td>
         </tr>
         <?php } ?>

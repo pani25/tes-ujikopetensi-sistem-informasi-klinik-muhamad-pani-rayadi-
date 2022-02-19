@@ -1,9 +1,9 @@
 <div class="halaman">
-	<h2> EDIT DATA USER </h2>
+	<h2> EDIT DATA DOKTER </h2>
 </div>
 
     <br/>
-        <a href="halaman_user.php?page=user" class="tombol">KEMBALI</a>
+        <a href="halaman_dokter.php?page=dokter" class="tombol">KEMBALI</a>
         <br/>
 	<br/>
 
@@ -14,7 +14,7 @@
 	while($d = mysqli_fetch_array($data)){
 		?>
 
-<form method="post" action="HalamanUser/updateuser.php">
+<form method="post" action="HalamanDokter/updatedokter.php">
 			<table>
 				<tr>			
 					<td>Nama</td>

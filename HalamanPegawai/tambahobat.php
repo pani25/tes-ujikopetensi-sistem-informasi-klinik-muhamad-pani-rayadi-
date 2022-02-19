@@ -7,7 +7,7 @@
         <br/>
 	<br/>
 
-    <form method="post" action="tambah_aksiObat.php">
+    <form method="post" action="tambah_aksi_obat.php">
 		<table width=60%>
 			<tr>			
 				<td>Nama Obat</td>
@@ -15,7 +15,7 @@
 			</tr>
 			<tr>
 				<td>Jenis Obat</td>
-				<td><input type="text" name="jenisObat"></td>
+				<td><input type="text" name="hargasObat"></td>
 			</tr>
 			<tr>
 				<td></td>

@@ -27,7 +27,7 @@
                     <td><?php echo $d['level']; ?></td>
                     <td>
                         <a href="halaman_user.php?page=edit">EDIT</a>
-                        <a href="hapus.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+                        <a href="hapususer.php?id=<?php echo $d['id']; ?>">HAPUS</a>
                     </td>
         </tr>
         <?php } ?>

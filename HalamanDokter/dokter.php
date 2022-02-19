@@ -1,8 +1,8 @@
 <div class="halaman">
-	<h2> DATA PEGAWAI</h2>
+	<h2> DATA DOKTER</h2>
 </div>
 
-<a href="halaman_pegawai.php?page=tambahpegawai" class="tombol">+ TAMBAH USER</a>
+<a href="halaman_dokter.php?page=tambahdokter" class="tombol">+ TAMBAH DOKTER</a>
 <br/>
 <br/>
 	<table border="1" width="100%">
@@ -26,8 +26,8 @@
                     <td><?php echo $d['username']; ?></td>
                     <td><?php echo $d['level']; ?></td>
                     <td>
-                        <a href="halaman_pegawai.php?page=editpegawai">EDIT</a>
-                        <a href="hapuspegawai.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+                        <a href="halaman_dokter.php?page=editdokter">EDIT</a>
+                        <a href="hapusdokter.php?id=<?php echo $d['id']; ?>">HAPUS</a>
                     </td>
         </tr>
         <?php } ?>
