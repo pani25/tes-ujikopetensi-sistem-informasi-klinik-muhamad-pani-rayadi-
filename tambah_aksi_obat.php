@@ -2,9 +2,9 @@
 include 'koneksi.php';
  
 $namaObat = $_POST['namaObat'];
-$jenisObat = $_POST['jenisObat'];
+$hargaObat = $_POST['hargaObat'];
  
-mysqli_query($koneksi,"insert into obat values('','$namaObat','$jenisObat')");
+mysqli_query($koneksi,"insert into obat values('','$namaObat','$hargaObat')");
  
 header("location:halaman_pegawai.php?page=obat");
  

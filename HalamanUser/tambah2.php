@@ -19,7 +19,7 @@
 			</tr>
 			<tr>
 				<td>Tempat Lahir</td>
-				<td><input type="text" name="tempatlahir"></td>
+				<td><textarea name="tempatlahir"></textarea></td>
 			</tr>
             <tr>
 				<td>Umur</td>
@@ -27,11 +27,11 @@
 			</tr>
             <tr>			
 				<td>Jenis Kelamin</td>
-				<td><input type="text" name="jeniskelamin"></td>
+				<td><input type="text" name="jeniskelamin"></textarea></td>
 			</tr>
 			<tr>
 				<td>Alamat</td>
-				<td><input type="text" name="alamat"></td>
+				<td><textarea name="alamat"></textarea></td>
 			</tr>
 			<tr>
 				<td>Poli yang dituju</td>
@@ -39,7 +39,7 @@
 			</tr>
             <tr>
 				<td>Keluhan</td>
-				<td><input type="text" name="keluhan"></td>
+				<td><textarea name="keluhan"></textarea></td>
 			</tr>
 			<tr>
 				<td></td>

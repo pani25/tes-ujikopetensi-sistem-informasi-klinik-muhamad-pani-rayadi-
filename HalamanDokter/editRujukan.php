@@ -24,16 +24,28 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Username</td>
+					<td>Keluhan</td>
 					<td><input type="text" name="keluhan" value="<?php echo $d['keluhan']; ?>"></td>
 				</tr>
 				<tr>
-					<td>Password</td>
+					<td>Tindakan</td>
 					<td><input type="text" name="tindakan" value="<?php echo $d['tindakan']; ?>"></td>
 				</tr>
                 <tr>
-					<td>Level</td>
-					<td><input type="text" name="resepObat" value="<?php echo $d['resepObat']; ?>"></td>
+					<td>Obat</td>
+					<td>
+					<select name="resepObat">
+					<option>--Pilih obat--</option>
+					<?php
+					   include 'koneksi.php';
+					   $data = mysqli_query($koneksi,"select * from obat");
+					   while($row = mysqli_fetch_array($data)){ ?>
+
+						<option value="<?=$row['id'];?>"><?=$row['namaObat'];?></option>
+					
+					   <?php } ?>
+					</select>	
+					</td>			
 				</tr>
 				<tr>
 					<td></td>

@@ -30,6 +30,7 @@
 		<ul>
 			<li><a href="halaman_user.php?page=home">HOME</a></li>
 			<li><a href="halaman_user.php?page=registrasi">PENDAFTARAN PASIEN</a></li>
+			<li><a href="halaman_user.php?page=bayar">PEMBAYARAN</a></li>
 			<li><a href="halaman_user.php?page=user">USER</a></li>
 			<li><a href="logout.php">LOGOUT</a></li>
 		</ul>
@@ -51,6 +52,9 @@
 				break;
 			case 'user':
 				include "HalamanUser/user.php";
+				break;
+			case 'bayar':
+				include "HalamanUser/pembayaran.php";
 				break;
 			case 'tambah':
 				include "HalamanUser/tambah.php";

@@ -14,8 +14,8 @@
 				<td><input type="text" name="namaObat"></td>
 			</tr>
 			<tr>
-				<td>Jenis Obat</td>
-				<td><input type="text" name="hargasObat"></td>
+				<td>Harga Obat</td>
+				<td><input type="text" name="hargaObat"></td>
 			</tr>
 			<tr>
 				<td></td>

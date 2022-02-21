@@ -1,14 +1,13 @@
 <div class="halaman">
-	<h2>PENDAFTARAN PASIEN</h2>
-	<p>Ini adalah halaman pendaftaran pasien</p>
+	<h2>HASIL PENGECEKAN PASIEN</h2>
+	<p>Ini adalah halaman pengecekan pasien</p>
 </div>
 
-<a href="halaman_user.php?page=tambah2" class="tombol"> + DAFTAR PASIEN BARU </a>
 <br/>
 <br/>
 	<table border="1" width="100%">
         <tr>
-            <th>NO</th>
+            <<th>NO</th>
 			<th>Nama</th>
 			<th>Tanggal Lahir</th>
 			<th>Tempat Lahir</th>

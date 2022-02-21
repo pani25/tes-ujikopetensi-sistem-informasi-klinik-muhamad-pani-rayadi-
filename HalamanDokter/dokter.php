@@ -7,7 +7,7 @@
 <br/>
 	<table border="1" width="100%">
         <tr>
-            <<th>NO</th>
+            <th>NO</th>
 			<th>Nama</th>
 			<th>Username</th>
 			<th>Level</th>
@@ -26,7 +26,7 @@
                     <td><?php echo $d['username']; ?></td>
                     <td><?php echo $d['level']; ?></td>
                     <td>
-                        <a href="halaman_dokter.php?page=editdokter">EDIT</a>
+                        <a href="halaman_dokter.php?page=editdokter&id=<?= $d['id']; ?>">EDIT</a>
                         <a href="hapusdokter.php?id=<?php echo $d['id']; ?>">HAPUS</a>
                     </td>
         </tr>

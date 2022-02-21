@@ -7,7 +7,7 @@
 <br/>
 	<table border="1" width="100%">
         <tr>
-            <<th>NO</th>
+            <th>NO</th>
 			<th>Nama Obat</th>
 			<th>Harga Obat</th>
 			<th>OPSI</th>
@@ -24,8 +24,8 @@
                     <td><?php echo $d['namaObat']; ?></td>
                     <td><?php echo $d['hargaObat']; ?></td>
                     <td>
-                        <a href="halaman_pegawai.php?page=editobat">EDIT</a>
-                        <a href="hapusobat.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+                        <a href="halaman_pegawai.php?page=editobat&id=<?= $d['id']; ?>">EDIT</a>
+                        <a href="hapusobat.php?id=<?= $d['id']; ?>">HAPUS</a>
                     </td>
         </tr>
         <?php } ?>

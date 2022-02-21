@@ -24,7 +24,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Username</td>
+					<td>Harga</td>
 					<td><input type="text" name="hargaObat" value="<?php echo $d['hargaObat']; ?>"></td>
 				</tr>>
 				<tr>

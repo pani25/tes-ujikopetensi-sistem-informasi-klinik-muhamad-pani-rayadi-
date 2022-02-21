@@ -1,24 +1,22 @@
 <div class="halaman">
-	<h2> DATA RUJUKAN</h2>
+	<h2>PEMBAYARAN PASIEN</h2>
+	<p></p>
 </div>
-
-<a href="halaman_dokter.php?page=tambahrujukan" class="tombol">+ TAMBAH RUJUKAN</a>
-<br/>
-<br/>
 	<table border="1" width="100%">
         <tr>
             <th>NO</th>
-			<th>Nama</th>
+			<th>Nama Pasien</th>
 			<th>Keluhan</th>
 			<th>Tindakan</th>
 			<th>Resep Obat</th>
-            <th>Opsi</th>
+			<th>Total Pembayaran</th>
+			<th>Status</th>
 		</tr>
 
         <?php 
             include 'koneksi.php';
             $no = 1;
-            $data = mysqli_query($koneksi,"select * from tindakan JOIN obat ON tindakan.idObat = obat.id");
+            $data = mysqli_query($koneksi,"select * from pembayaran JOIN tindakan ON pembayaran.idBayar = tindakan.id JOIN obat on pembayaran.idObat = obat.id");
             while($d = mysqli_fetch_array($data)){
         ?>
         <tr>
@@ -27,9 +25,10 @@
                     <td><?php echo $d['keluhan']; ?></td>
                     <td><?php echo $d['tindakan']; ?></td>
                     <td><?php echo $d['namaObat']; ?></td>
+                    <td><?php echo $d['totalBayar']; ?></td>
+                    <td><?php echo $d['status']; ?></td>
                     <td>
-                        <a href="halaman_dokter.php?page=editrujukan&id=<?=$d['id']; ?>">EDIT</a>
-                        <a href="hapusrujukan.php?id=<?=$d['id']; ?>">HAPUS</a>
+                        <a href="updatepembayaran.php?id=<?php echo $d['idBayar'];?>" class="tombol">BAYAR</a>
                     </td>
         </tr>
         <?php } ?>

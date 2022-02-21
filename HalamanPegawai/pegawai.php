@@ -7,7 +7,7 @@
 <br/>
 	<table border="1" width="100%">
         <tr>
-            <<th>NO</th>
+            <th>NO</th>
 			<th>Nama</th>
 			<th>Username</th>
 			<th>Level</th>
@@ -26,8 +26,8 @@
                     <td><?php echo $d['username']; ?></td>
                     <td><?php echo $d['level']; ?></td>
                     <td>
-                        <a href="halaman_pegawai.php?page=editpegawai">EDIT</a>
-                        <a href="hapuspegawai.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+                        <a href="halaman_pegawai.php?page=editpegawai&id=<?= $d['id']; ?>">EDIT</a>
+                        <a href="hapuspegawai.php?id=<?= $d['id']; ?>">HAPUS</a>
                     </td>
         </tr>
         <?php } ?>
